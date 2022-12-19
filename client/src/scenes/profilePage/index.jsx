@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Navbar from "scenes/navbar";
-import FriendListWidget from "scenes/widget/FriendListWidget";
-import MyPostWidget from "scenes/widget/MyPostWidget";
-import PostsWidget from "scenes/widget/PostsWidget";
-import UserWidget from "scenes/widget/UserWidget";
+import FriendListWidget from "scenes/widgets/FriendListWidget";
+import MyPostWidget from "scenes/widgets/MyPostWidget";
+import PostsWidget from "scenes/widgets/PostsWidget";
+import UserWidget from "scenes/widgets/UserWidget";
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
