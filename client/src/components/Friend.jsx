@@ -10,9 +10,11 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { _id } = useSelector((state) => state.user);
+  // console.log(_id);
   const token = useSelector((state) => state.token);
+  // console.log(token);
   const friends = useSelector((state) => state.user.friends);
-
+  console.log(friends);
   const { palette } = useTheme();
   const primaryLight = palette.primary.light;
   const primaryDark = palette.primary.dark;
@@ -33,6 +35,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
       }
     );
     const data = await response.json();
+    console.log(data);
     dispatch(setFriends({ friends: data }));
   };
 
@@ -78,4 +81,4 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   );
 };
 
-export default Friend
+export default Friend;
